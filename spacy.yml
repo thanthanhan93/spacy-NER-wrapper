@@ -1,0 +1,12 @@
+name: spacy_NER
+channels:
+  - defaults
+dependencies:
+  - python=3.6
+  - numpy
+  - pandas 
+  - flask
+  - pip:
+    - spacy
+    - ipykernel
+    - nltk

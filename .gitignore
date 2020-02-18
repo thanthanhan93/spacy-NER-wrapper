@@ -1,0 +1,7 @@
+w2v_init_model
+fasttext_init_model
+NER_model
+ner_datasets
+data
+generate_train_test.ipynb
+models_embed/*
