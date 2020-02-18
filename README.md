@@ -14,25 +14,24 @@ we expect the config in the following format:
 
 ```json
 meta_data = {
-    # model
     "path_model": "model-path", 
     "preprocess_rule": [["<\/?[^>]+(>|$)", " "], 
-         [u"\\xa0|\\-|\\‐", " "], 
-         [u"\\'", ""],
-         [r"([^\\d\\W]+)(\\d+[^\\s]*)", r"\\1 \\2"]],
+         ["\\xa0|\\-|\\‐", " "], 
+         ["\\'", ""],
+         ["([^\\d\\W]+)(\\d+[^\\s]*)", r"\\1 \\2"]],
     
     "train":
     {
         "path_data": "data/train_data.csv",
-        "preprocess_cols": ['lower_lpn', 'origin_lpn'],
-        "list_cols" : ['tag'],
-        'feature_col' : 'origin_lpn'
+        "preprocess_cols": ["lower_lpn", "origin_lpn"],
+        "list_cols" : ["tag"],
+        "feature_col" : "origin_lpn"
     },
     "test":
     {
-        "path_data": "data/test_data.csv",
-        "preprocess_cols": ['lower_lpn', 'origin_lpn'],
-        "list_cols" : ['tag'],
+        "path_data": "data/train_data.csv",
+        "preprocess_cols": ["lower_lpn", "origin_lpn"],
+        "list_cols" : ["tag"],
         "feature_col" : "origin_lpn"
     },
     "predict":
